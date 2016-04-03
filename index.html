@@ -19,7 +19,7 @@
     var team = { homeruns: 225, rbi: 840, runs: 896, stolenbases: 106, doubles: 274 };
 
     var get_player = function(name) {
-      for (var i=0; i<players.length, i++) {
+      for (var i=0; i<players.length; i++) {
         if (players[i].player === name) return players[i];
       }
     }
@@ -35,11 +35,32 @@
       return obj;
     };
 
+    var labels = [
+      [0,"Home Runs"],
+      [1,"RBI"],
+      [2,"Runs"],
+      [3,"Stolen Bases"],
+      [4,"Doubles"]
+    ]
+
       window.onload = function () {
-        Flotr.draw(document.getElementById("chart"), data, {
+        Flotr.draw(document.getElementById("chart"),
+        [
+          player_data("Alan Trammell"),
+          player_data("Darrell Evans"),
+          player_data("Matt Nokes"),
+          player_data("Kirk Gibson"),
+          player_data("Chet Lemon")
 
+        ],
+         {
+           title: "1997 Detroit Tigers Top 5 Offensive Players",
+           radar: {show: true},
+           grid: {circular: true},
+           xaxis: {ticks: labels,},
+           yaxis: {showLabels: false, min:0, max: 33,}
         }
-
+      );
       }
 
     </script>
