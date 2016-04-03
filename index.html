@@ -18,6 +18,23 @@
 
     var team = { homeruns: 225, rbi: 840, runs: 896, stolenbases: 106, doubles: 274 };
 
+    var get_player = function(name) {
+      for (var i=0; i<players.length, i++) {
+        if (players[i].player === name) return players[i];
+      }
+    }
+
+    var player_data = function(name) {
+      var obj = {}, i = 0;
+      obj.label = name;
+      obj.data = [];
+      for (var key in team) {
+        obj.data.push([i, 100*get_player(name)[key]/team[key]]);
+        i++;
+      };
+      return obj;
+    };
+
       window.onload = function () {
         Flotr.draw(document.getElementById("chart"), data, {
 
