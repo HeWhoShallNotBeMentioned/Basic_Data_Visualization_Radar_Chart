@@ -8,10 +8,19 @@
     <div id="chart" style="width:800px;height:400px;"></div>
     <script type="text/javascript" src="js/flotr2.js"> </script>
     <script>
+    var players = [
+      { player: "Alan Trammell", homeruns: 28, rbi: 105, runs: 109, stolenbases: 21, doubles: 34},
+      { player: "Darrell Evans", homeruns: 34, rbi: 99, runs: 90, stolenbases: 6, doubles: 20},
+      { player: "Matt Nokes", homeruns: 32, rbi: 87, runs: 69, stolenbases: 2, doubles: 14},
+      { player: "Kirk Gibson", homeruns: 24, rbi: 79, runs: 95, stolenbases: 26, doubles: 25},
+      { player: "Chet Lemon", homeruns: 20, rbi: 75, runs: 75, stolenbases: 0, doubles: 30}
+    ];
 
       window.onload = function () {
         Flotr.draw(document.getElementById("chart"), data, {
-          
+
+        }
+
       }
 
     </script>
