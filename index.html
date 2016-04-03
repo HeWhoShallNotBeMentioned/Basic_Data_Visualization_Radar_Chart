@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>1997 Detroit Tigers Top Five Hitters</title>
   </head>
   <body>
     <div id="chart" style="width:800px;height:400px;"></div>
@@ -15,6 +15,8 @@
       { player: "Kirk Gibson", homeruns: 24, rbi: 79, runs: 95, stolenbases: 26, doubles: 25},
       { player: "Chet Lemon", homeruns: 20, rbi: 75, runs: 75, stolenbases: 0, doubles: 30}
     ];
+
+    var team = { homeruns: 225, rbi: 840, runs: 896, stolenbases: 106, doubles: 274 };
 
       window.onload = function () {
         Flotr.draw(document.getElementById("chart"), data, {
